@@ -8,5 +8,18 @@
 
 import Foundation
 
-print("Hello, World!")
+func OuterFunc(a:Int)->Int
+{
+    var start=0
+    func InnerFunc(b:Int)->Int
+    {
+        start+=a*b
+        print((start))
+        return start
+    }
+    return InnerFunc(10)*InnerFunc(a)
+}
+
+print(OuterFunc(5))
+
 
